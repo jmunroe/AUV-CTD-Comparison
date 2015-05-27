@@ -1,0 +1,185 @@
+%%
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%%
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%%
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%%
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%%
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+%%
+%%
+%%
+%% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%%
+%%
+\documentclass[preprint,12pt,3p]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+\usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+\journal{Ocean Engineering}
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+\title{ AUV acoustic measurements and profiling CTD casts}
+
+\author[label1]{James R. Munroe\corref{cor1}}
+\address[label1]{Physics and Physical Oceanography, Memorial University of Newfoundland}
+\cortext[cor1]{Corresponding author}
+\ead{jmunroe@mun.ca}
+\ead[url]{http://www.physics.mun.ca/~jmunroe}
+
+\author[label2]{Peter King}
+\address[label2]{Faculty of Engineering, Memorial University of Newfoundland}
+\ead{peter.king@mun.ca}
+
+\begin{abstract}
+If you have a AUV equipped with a CTD, do you still need to do profiling CTD casts?
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+AUV \sep CTD \sep sound velocity profile
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers
+
+
+\section{Introduction}
+\label{sec:Introduction}
+
+Oceanographic acoustic measurements require information on the sound velocity in the water column.  This information is routinely obtained through vertically profiling Conductivity-Temperature-Depth (CTD) cast and the sound velocity is calculated using standardized empirical relationships.
+
+Memorial University's \textit{Explorer} is an autonomous underwater vehicle (AUV) equipped with a multibeam echosounder and side scan sonar. The AUV is also equipped with a CTD that continually samples data.
+
+The normal protocol when using the AUV for subsea surveying is to first make a CTD cast near the area of interest. CTD casts are regularly during a multi day survey since accurate information about the sound speed velocity is critical.  However, if the AUV is already equipped with a CTD sensor package, is a separate profiling CTD really necessary?  
+
+In a field survey of Smith Sound, NL, during July 2014 both profiling CTD casts and CTD measurements using the AUV were made.  This paper examines the differences in post-processed images using estimates of sound speed velocity from both a CTD cast and the vertical profile recorded from the diving AUV.  
+
+\section{Methods}
+
+Is the 'sound velocity' for the AUV calculated from the on board CTD data or is being measured with a direct-measured instrument?  The sound velocities in the data do differ substantially between the AUV and CTD, but I think that is due to different formulae for the sound velocity being used.ds
+
+\section{Results}
+
+
+ Over the course of six days, a total of 11 profiling CTD casts and 22 AUV dives were made.  Figure 1 shows the locations of the dives and casts. The AUV dove at a controlled rate of 0.2 m/s. The CTD was lowered down with a typical descent rate of 1.6 m/s decelerating at a rate of 0.002 m/s2.  Depending on the cast, the descent would drop for 10s of seconds to speed of about 1.0 m/s.
+There is clearly dependence in the stratification on date and probably location.  Looking at the data, my suspicion is the difference between the instruments for temperature and salinity is not significant. I am still trying to figure out the correct statistical test to justify that statement.  
+
+ Figure 4: AUV dives and CTD casts for July 15, 2014. Thin steep lines are CTD casts and thick lines are AUV dives. Label indicates hour of start of dive/cast.
+
+Temperature, salinity and sound velocity profiles.
+
+Figure 5: Temperature, salinity and sound velocity profiles.  Thick lines are AUV dives and thin lines are CTD casts.
+
+\section{Analysis}
+
+Sound velocity is calculated using Chen-Millero.
+
+\subsection{Statistical Comparison}
+ 
+\subsection{Ray Tracing}
+
+\section{Conclusion}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with bibTeX database:
+
+\bibliographystyle{elsarticle-num}
+% \bibliographystyle{elsarticle-harv}
+% \bibliographystyle{elsarticle-num-names}
+% \bibliographystyle{model1a-num-names}
+% \bibliographystyle{model1b-num-names}
+% \bibliographystyle{model1c-num-names}
+% \bibliographystyle{model1-num-names}
+% \bibliographystyle{model2-names}
+% \bibliographystyle{model3a-num-names}
+% \bibliographystyle{model3-num-names}
+% \bibliographystyle{model4-names}
+% \bibliographystyle{model5-names}
+% \bibliographystyle{model6-num-names}
+
+\bibliography{sample}
+
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-num.tex'.
